@@ -41,6 +41,11 @@ async function connectDB(): Promise<typeof mongoose> {
 
   // Return existing connection promise if one is in progress
   if (!cached.promise) {
+    if(!MONGODB_URI) {
+      throw new Error(
+        'Please define the MONGODB_URI environment variable inside .env.local'
+      );
+    }
     const opts = {
       bufferCommands: false, // Disable mongoose buffering
     };
