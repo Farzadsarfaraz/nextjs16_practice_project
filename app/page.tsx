@@ -1,6 +1,5 @@
 import EventCard from "@/components/EventCard";
 import ExploreBtn from "@/components/ExploreBtn";
-import { time } from "console";
 
 const events = [
   { image: '/images/event1.png', title: 'Event 1', slug: 'event-1', location: 'New York', date: '2024-07-15', time: '10:00 AM' },
